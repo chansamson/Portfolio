@@ -1,63 +1,70 @@
-const projects = [
-  {
-    id: 1,
-    year: 2026,
-    project: "Car Window Tint Near Me",
-    madeAt: "IBX Digital",
-    builtWith: ["Landing Pages", "WordPress", "Bricks", "ACF"],
-    link: "www.car-window-tint-near-me.com",
-    url: "https://car-window-tint-near-me.com/",
-  },
-  {
-    id: 2,
-    year: 2026,
-    project: "Home and Office Window Tinting",
-    madeAt: "IBX Digital",
-    builtWith: ["Landing Pages", "WordPress", "Elementor", "ACF"],
-    link: "www.homeandofficewindowtinting.com",
-    url: "https://homeandofficewindowtinting.com/",
-  },
-  {
-    id: 3,
-    year: 2026,
-    project: "Ceramic Coating Services",
-    madeAt: "IBX Digital",
-    builtWith: ["Landing Pages", "WordPress", "Elementor", "ACF"],
-    link: "www.ceramic-coating.services",
-    url: "https://ceramic-coating.services/",
-  },
-];
+import { projects } from "./Projects";
 
 const ProjectsTable = () => {
-  const projectList = projects.map((project) => (
-    <tr key={project.id}>
-      <td>{project.year}</td>
-      <td>{project.project}</td>
-      <td>{project.madeAt}</td>
-      <td>
-        <ul className="flex flex-wrap gap-2">
-          {project.builtWith.map((tool) => (
-            <li key={tool}>{tool}</li>
+  const sortedProjectList = [...projects].sort((a, b) => b.year - a.year);
+
+  const projectList = sortedProjectList.map((project, index) => (
+    <tr key={index} className="border-b border-slate-300/10 last:border-none">
+      <td className="py-4 pr-4 align-top text-sm">{project.year}</td>
+      <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
+        {project.project}
+      </td>
+      <td className="hidden py-4 pr-4 align-top text-sm lg:table-cell">
+        {project.madeAt}
+      </td>
+      <td className="hidden py-4 pr-4 align-top lg:table-cell">
+        <ul className="flex -translate-y-1.5 flex-wrap">
+          {project.builtWith.map((tool, index) => (
+            <li key={index} className="my-1 mr-1.5">
+              <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                {tool}
+              </div>
+            </li>
           ))}
         </ul>
       </td>
-      <td>
+      <td className="hidden py-4 align-top sm:table-cell">
         <a href={project.url} target="_blank">
-          {project.link}
+          <div className="items-baseline font-medium leading-tight text-slate-200 text-sm text-slate-400 group/link text-sm hover:text-teal-300">
+            {project.link}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
         </a>
       </td>
     </tr>
   ));
 
   return (
-    <table className="table-auto w-full text-left">
-      <thead>
+    <table className="mt-12 w-full border-collapse text-left">
+      <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur">
         <tr>
-          <th>Year</th>
-          <th>Project</th>
-          <th>Made at</th>
-          <th>Built with</th>
-          <th>Link</th>
+          <th className="py-4 pr-8 text-sm font-semibold text-slate-200">
+            Year
+          </th>
+          <th className="py-4 pr-8 text-sm font-semibold text-slate-200">
+            Project
+          </th>
+          <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">
+            Made at
+          </th>
+          <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">
+            Built with
+          </th>
+          <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-200 sm:table-cell">
+            Link
+          </th>
         </tr>
       </thead>
       <tbody>{projectList}</tbody>
@@ -67,10 +74,16 @@ const ProjectsTable = () => {
 
 export default function Page() {
   return (
-    <div>
-      <p className="text-left">Christian Samson</p>
-      <h1 className="text-left">All Projects</h1>
-      <ProjectsTable />
+    <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+      <div className="lg:py-24">
+        <p className="mb-2 font-semibold leading-tight text-teal-300 text-left">
+          Christian Samson
+        </p>
+        <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl text-left">
+          All Projects
+        </h1>
+        <ProjectsTable />
+      </div>
     </div>
   );
 }
