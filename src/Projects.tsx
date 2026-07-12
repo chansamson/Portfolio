@@ -1,6 +1,14 @@
 export const projects = [
   {
     year: 2026,
+    project: "Portfolio | Christian Samson",
+    madeAt: "...",
+    builtWith: ["React", "Vite"],
+    link: "...",
+    url: "#",
+  },
+  {
+    year: 2026,
     project: "Car Window Tint Near Me",
     madeAt: "IBX Digital",
     builtWith: ["Landing Pages", "WordPress", "Bricks", "ACF"],

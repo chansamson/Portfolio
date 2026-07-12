@@ -76,7 +76,7 @@ export default function Page() {
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
       <div className="lg:py-24">
-        <p className="mb-2 font-semibold leading-tight text-teal-300 text-left">
+        <p className="group mb-2 items-center font-semibold leading-tight text-teal-300 text-left">
           Christian Samson
         </p>
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl text-left">
