@@ -1,7 +1,12 @@
-import { ProjectsTable } from "./components/ProjectsTable";
-import { FooterCopyright } from "./components/Footer";
+import { createLazyFileRoute } from "@tanstack/react-router";
+import { ProjectsTable } from "../components/ProjectsTable";
+import { FooterCopyright } from "../components/Footer";
 
-export default function App() {
+export const Route = createLazyFileRoute("/")({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
       <div className="lg:pt-24">

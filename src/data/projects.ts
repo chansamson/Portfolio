@@ -1,5 +1,20 @@
 export const projects = [
   {
+    year: 2026,
+    project: "Portfolio | Christian Samson",
+    madeAt: "...",
+    builtWith: ["React", "TypeScript", "Tailwind"],
+    link: "...",
+  },
+  {
+    year: 2026,
+    project: "Portfolio | Christian Samson",
+    madeAt: "...",
+    builtWith: ["HTML", "CSS", "Bootstrap"],
+    link: "chansamson.github.io/christian-samson/portfolio.html",
+    url: "https://chansamson.github.io/christian-samson/portfolio.html",
+  },
+  {
     year: 2019,
     project: "OHSNJ",
     madeAt: "Divigner",
@@ -110,13 +125,6 @@ export const projects = [
     builtWith: ["WordPress", "Elementor"],
     link: "db-relief.com",
     url: "https://db-relief.com/",
-  },
-  {
-    year: 2026,
-    project: "Portfolio | Christian Samson",
-    madeAt: "...",
-    builtWith: ["React", "TypeScript", "Tailwind"],
-    link: "...",
   },
   {
     year: 2026,
