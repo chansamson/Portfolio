@@ -5,7 +5,6 @@ export const projects = [
     madeAt: "...",
     builtWith: ["React", "TypeScript", "Tailwind"],
     link: "https://portfolio-christian-samson.vercel.app/",
-    url: "#",
   },
   {
     year: 2026,
