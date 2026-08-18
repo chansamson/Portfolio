@@ -1,15 +1,13 @@
 export const projects = [
   {
     year: 2026,
-    project: "Portfolio | Christian Samson",
-    madeAt: "...",
+    project: "Portfolio | Christian Samson | React",
     builtWith: ["React", "TypeScript", "Tailwind CSS"],
     link: "portfolio-christian-samson.vercel.app",
   },
   {
     year: 2026,
     project: "Portfolio | Christian Samson",
-    madeAt: "...",
     builtWith: ["HTML", "CSS", "Bootstrap"],
     link: "chansamson.github.io/christian-samson/portfolio.html",
     url: "https://chansamson.github.io/christian-samson/portfolio.html",

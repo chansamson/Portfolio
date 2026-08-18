@@ -12,7 +12,7 @@ export const ProjectsTable = () => {
           <div className="block sm:hidden">
             <a
               className="inline-flex items-baseline font-medium leading-tight text-slate-200 sm:hidden group/link text-base"
-              href={project.link}
+              href={project.url}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -39,10 +39,6 @@ export const ProjectsTable = () => {
           <div className="hidden sm:block">{project.project}</div>
         </div>
       </td>
-
-      {/* <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
-        {project.project}
-      </td> */}
       <td className="hidden py-4 pr-4 align-top text-sm lg:table-cell">
         {project.madeAt}
       </td>
