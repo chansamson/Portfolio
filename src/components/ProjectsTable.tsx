@@ -40,9 +40,9 @@ export const ProjectsTable = () => {
         </div>
       </td>
 
-      <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
+      {/* <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
         {project.project}
-      </td>
+      </td> */}
       <td className="hidden py-4 pr-4 align-top text-sm lg:table-cell">
         {project.madeAt}
       </td>
