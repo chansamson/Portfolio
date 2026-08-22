@@ -13,6 +13,7 @@ import "./index.css";
 // Create a new router instance
 const router = createRouter({
   routeTree,
+  basepath: import.meta.env.BASE_URL,
   defaultNotFoundComponent: () => <PageNotFound />,
 });
 

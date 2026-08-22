@@ -1,7 +1,20 @@
 export const projects = [
   {
     year: 2026,
-    project: "Portfolio | Christian Samson | React",
+    project: "Photography | Christian Samson",
+    builtWith: ["React", "TypeScript", "Tailwind CSS"],
+    link: "...",
+  },
+  {
+    year: 2025,
+    project: "Photography | Christian Samson",
+    builtWith: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    link: "chansamson.github.io/christian-samson/photography.html",
+    url: "https://chansamson.github.io/christian-samson/photography.html",
+  },
+  {
+    year: 2026,
+    project: "Portfolio | Christian Samson",
     builtWith: ["React", "TypeScript", "Tailwind CSS"],
     link: "portfolio-christian-samson.vercel.app",
   },
