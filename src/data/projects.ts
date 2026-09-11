@@ -175,7 +175,7 @@ export const projects = [
     madeAt: "IBX Digital",
     builtWith: ["WordPress", "Elementor", "ACF", "CPT"],
     link: "www.rosewooddecks.com",
-    url: "https://www.rosewooddecks.com/",
+    url: "https://rosewooddecks.com/",
   },
   {
     year: 2025,
